@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Student Work Uploader for Toddle",
+  "version": "1.3.1",
+  "description": "Automates the Toddle student work upload workflow: drag and drop a file to the student name column",
+  "permissions": ["activeTab"],
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://web.toddleapp.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
